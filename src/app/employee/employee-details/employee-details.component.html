@@ -1,0 +1,22 @@
+<ul style="padding-left:120px;" *ngIf="employeeList.length>0"  >
+    <li *ngFor="let employee of employeeList" class="bgColor" >
+        
+      <a [routerLink]="['/employee',employee.EmpId]" class="parent_div_1">
+        <div class="child_div_1">
+            <ngx-avatar bgColor="red" fgColor="black" size="100" 
+            [name]="employee.name" value="75%" ></ngx-avatar>
+        </div>
+        <div>
+      <p class="w-50">name: {{employee.name}}</p>
+      <p class="w-50">id: {{employee.EmpId}}</p>
+      <p class="w-50 text-right">companyName: {{employee.companyName}}</p>
+      <p class="w-50">emailId: {{employee.emailId}}</p>
+      <p class="w-50 text-right">contactNo: {{employee.contactNo}}</p>
+      <p class="w-50 text-right">designation: {{employee.designation}}</p>
+    </div>
+      </a>
+    </li>
+  </ul>
+  
+
+  <h3 *ngIf="employeeList.length==0" class="text-center">No Record Found.</h3>

@@ -1,0 +1,56 @@
+<form [formGroup]="employeeManagementForm">
+    <div>
+        <input 
+            type="text" 
+            class="form-control " 
+            formControlName="name" 
+            name="name" 
+            placeholder="Name">
+    </div>
+    <div >
+        <input 
+            type="number" 
+            class="form-control " 
+            formControlName="EmpId" 
+            name="EmpId" 
+            placeholder="Employee ID"
+            [readOnly]="isEdit">
+    </div>
+    <div >
+        <input 
+            type="text" 
+            class="form-control " 
+            formControlName="companyName" 
+            name="companyName" 
+            placeholder="companyName"
+            >
+    </div>
+    <div >
+        <input 
+            type="email" 
+            class="form-control " 
+            formControlName="emailId" 
+            name="emailId" 
+            
+            placeholder="Email">
+    </div>
+    <div >
+        <input 
+            type="text" 
+            class="form-control " 
+            formControlName="contactNo" 
+            name="contactNo" 
+            placeholder="ContactNo">
+    </div>   
+    <div >
+        <input 
+            type="text" 
+            class="form-control " 
+            formControlName="designation" 
+            name="designation" 
+            placeholder="Designation">
+    </div>           
+  </form>
+  <button (click)="add()" *ngIf="!isEdit">Add</button>
+  <button (click)="edit()" *ngIf="isEdit">Edit</button>
+  <button (click)="resetForm()" *ngIf="!isEdit">Reset</button>

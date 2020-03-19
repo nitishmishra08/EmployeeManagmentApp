@@ -1,0 +1,10 @@
+<div *ngIf="employee">
+    <p>Name: {{employee.name}}</p>
+    <p>id: {{employee.EmpId}}</p>
+    <p>companyName: {{employee.companyName}}</p>
+    <p>emailId: {{employee.emailId}}</p>
+    <p>contactNo: {{employee.contactNo}}</p>
+    <p>designation: {{employee.designation}}</p>
+    <a [routerLink]="['/employee-add', employee.EmpId]">Edit</a>
+    
+  </div>
